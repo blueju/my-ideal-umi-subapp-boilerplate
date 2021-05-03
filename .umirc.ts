@@ -5,6 +5,7 @@ export default defineConfig({
     type: 'none',
   },
   publicPath: './',
+  qiankun: { slave: {} },
   routes: [{ path: '/', component: '@/pages/index' }],
   fastRefresh: {},
 });
