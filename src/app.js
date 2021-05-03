@@ -1,5 +1,5 @@
 import { history, withRouter } from 'umi';
-import actions from '@/shared/actions';
+import actions from '@/_shared/actions';
 
 /**
  * 只有当子应用独立运行且处于生产环境时，才禁止进入内容页面。
