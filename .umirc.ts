@@ -1,4 +1,5 @@
 import { defineConfig } from 'umi';
+import routes from './config/routes';
 
 export default defineConfig({
   nodeModulesTransform: {
@@ -7,6 +8,6 @@ export default defineConfig({
   publicPath: './',
   qiankun: { slave: {} },
   history: { type: 'hash' },
-  routes: [{ path: '/', component: '@/pages/index' }],
+  routes,
   fastRefresh: {},
 });
