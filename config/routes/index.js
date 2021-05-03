@@ -23,6 +23,12 @@ const routes = [
     ],
   },
   {
+    name: '403',
+    title: '403',
+    path: '/403',
+    component: './403',
+  },
+  {
     component: './404',
   },
 ];
