@@ -27,15 +27,16 @@ function mainAppLoadingStateChangeCb(props, state) {
 export const qiankun = {
   /**
    * 应用加载之前，
-   * 子应用单独运行时 props 为空
+   * 子应用单独运行时 props 为空。
    * @param {*} props
    */
   async bootstrap(props) {
     console.log('bootstrap', props);
   },
+
   /**
    * 应用 render 之前触发，
-   * 应用每次进入都会调用
+   * 应用每次进入都会调用。
    */
   async mount(props) {
     console.log('mount', props);
@@ -48,6 +49,7 @@ export const qiankun = {
     // 通过修改全局状态修改子应用加载动画
     mainAppLoadingStateChange(mainAppLoadingStateChangeCb, props, state);
   },
+
   /**
    * 应用卸载之后触发
    */
@@ -56,20 +58,32 @@ export const qiankun = {
   },
 };
 
-// 请求服务端根据响应动态更新路由
+/**
+ * 请求服务端根据响应动态更新路由
+ * @param routes 原路由
+ */
 export function patchRoutes(routes) {
   console.log('patchRoutes');
   console.log(routes);
 }
 
-// 渲染应用之前做权限校验，不通过则跳转到登录页
+/**
+ * 覆写 render，
+ * 比如用于渲染之前做权限校验等。
+ * @param oldRender 原渲染方法
+ */
 export function render(oldRender) {
   console.log('render');
   setTimeout(oldRender, 1000);
 }
 
 // 用于在初始加载和路由切换时做一些事情
-export function onRouteChange({ location, routes, action }) {
+/**
+ * 在初始加载和路由切换时做一些事情，
+ * 比如用于做埋点统计、设置标题等。
+ * @param params 具体属性详见 console.log
+ */
+export function onRouteChange(params) {
   console.log('onRouteChange');
-  console.log(location.pathname);
+  console.log(params);
 }
