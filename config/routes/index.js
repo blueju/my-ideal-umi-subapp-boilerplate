@@ -12,8 +12,8 @@ const routes = [
     flatMenu: true,
     routes: [
       {
-        name: 'Index',
-        title: 'Index',
+        name: '主页',
+        title: '主页',
         path: '/',
         component: '@/pages/index',
       },
@@ -27,6 +27,12 @@ const routes = [
     title: '403',
     path: '/403',
     component: './403',
+  },
+  {
+    name: '禁止独立运行',
+    title: '禁止独立运行',
+    path: '/ban-run-alone',
+    component: './BanRunAlone',
   },
   {
     component: './404',

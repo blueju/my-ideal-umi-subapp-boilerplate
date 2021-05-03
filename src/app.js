@@ -1,11 +1,12 @@
-import { history, withRouter } from 'umi';
+import { history } from 'umi';
+
 import actions from '@/_shared/actions';
 
 /**
  * 只有当子应用独立运行且处于生产环境时，才禁止进入内容页面。
  */
 if (!window.__POWERED_BY_QIANKUN__ && process.env.NODE_ENV === 'production') {
-  history.push('/noAuth');
+  history.push('/ban-run-alone');
 }
 
 function mainAppLoadingStateChange(callback, props, state) {
