@@ -15,5 +15,6 @@ export default defineConfig({
     name: '开发环境临时菜单',
     locale: false,
   },
+  // 是为了消除警告 "export 'SelectLang' was not found in 'umi'
   locale: {},
 });
