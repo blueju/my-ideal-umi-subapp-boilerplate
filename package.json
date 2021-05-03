@@ -1,4 +1,6 @@
 {
+  "name":"my-ideal-umi-subapp-boilerplate",
+  "description":"我理想中的 umi 子应用脚手架",
   "private": true,
   "scripts": {
     "start": "umi dev",
@@ -27,6 +29,7 @@
   "devDependencies": {
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@umijs/plugin-qiankun": "^2.24.1",
     "@umijs/test": "^3.4.14",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.25.0",
