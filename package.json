@@ -37,6 +37,7 @@
     "@umijs/plugin-qiankun": "^2.24.1",
     "@umijs/test": "^3.4.14",
     "babel-eslint": "^10.1.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "cross-env": "^7.0.3",
     "eslint": "^7.25.0",
     "eslint-config-alloy": "^4.1.0",
