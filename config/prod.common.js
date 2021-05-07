@@ -1,4 +1,6 @@
 import packageJson from '../package.json';
+/** 未在 package.json 依赖关系中列出模块，直接借用了其他模块中依赖的 moment，如 antd */
+import moment from 'moment';
 
 /** 获取 outputPath */
 function getOutputPath() {
@@ -7,8 +9,8 @@ function getOutputPath() {
   // 打包环境
   const env = process.env.UMI_ENV;
   // 标准化时间戳格式
-  const date = new Date().toLocaleDateString().replace(/\//g, '.');
-  const time = new Date().toLocaleTimeString().replace(/:/g, '.');
+  const date = moment().format('YYYY.MM.DD');
+  const time = moment().format('hh.mm');
   return `dist-${description}-${env}-${date}-${time}`;
 }
 
