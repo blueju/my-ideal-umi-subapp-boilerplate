@@ -3,7 +3,7 @@
  */
 import { defineConfig } from 'umi';
 
-import prodCommonConfig from './config/prod.common';
+import prodCommonConfig from './prod.common';
 
 export default defineConfig({
   ...prodCommonConfig,
