@@ -1,6 +1,6 @@
 {
   "name": "my-ideal-umi-subapp-boilerplate",
-  "description": "我理想中的 umi 子应用脚手架",
+  "description": "子应用脚手架",
   "private": true,
   "scripts": {
     "start": "umi dev",
