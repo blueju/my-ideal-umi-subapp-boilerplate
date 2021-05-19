@@ -2,7 +2,11 @@ import packageJson from '../package.json';
 /** 未在 package.json 依赖关系中列出模块，直接借用了其他模块中依赖的 moment，如 antd */
 import moment from 'moment';
 
-/** 获取 outputPath */
+/**
+ * 因为目前我们这需要手动打包后，放入 sofa boot 中二次打包发布，
+ * 为了方便记录打包时刻，因此对打包后文件的命名做了点标准化。
+ * @returns {string}
+ */
 function getOutputPath() {
   // 项目名称/描述
   const { description } = packageJson;
